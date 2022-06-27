@@ -5,4 +5,10 @@ class CheesesController < ApplicationController
     render json: cheeses
   end
 
+  def show
+    cheeses = Cheese.find_by(params[:id])
+    render json: cheeses
+  end
+
+
 end
